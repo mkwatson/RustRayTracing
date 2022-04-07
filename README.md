@@ -10,6 +10,17 @@ Heavily inspired by [Ray Tracing in One Weekend](https://raytracing.github.io/bo
 - I've never built a ray tracer from scratch
 - Hopefully can be used as a playground to investigate other fun things like WASM, WebGL, etc
 
-### Table of Contents
+### Generate first PPM image file
 
-- [Ch1: Generate First PPM File](ch1/)
+```bash
+# Generate ppm
+cargo run > image.ppm
+
+# convert to png (need ffmpeg installed)
+# so that a browser will display it (like in this README)
+ffmpeg -i image.ppm image.png
+```
+
+### Output
+
+![First Ouput Image](image.png)
