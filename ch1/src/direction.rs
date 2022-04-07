@@ -1,8 +1,7 @@
-use nalgebra::{Vector3, magnitude};
-use crate::direction::Direction;
+use nalgebra::{Vector3, Unit};
 
-pub type Direction = Vector3<i32>;
+pub type Direction = Vector3<f32>;
 
 pub fn unit(dir: &Direction) -> Unit<Direction> {
-    dir / magnitude(dir);
+    Unit::new_normalize(Direction::clone(dir))
 }
